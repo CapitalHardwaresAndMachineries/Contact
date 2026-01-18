@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Hardwares And Machineries</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:"Segoe UI",Arial,sans-serif;
+color:#e5e5e5;
+background:
+radial-gradient(circle at top center, rgba(212,175,55,0.15), transparent 45%),
+radial-gradient(circle at bottom right, rgba(255,255,255,0.05), transparent 40%),
+linear-gradient(180deg,#000000,#0a0a0a,#111111);
+min-height:100vh;
+}
+
+.container{
+max-width:480px;
+margin:24px auto 120px;
+background:linear-gradient(180deg,rgba(20,20,20,0.95),rgba(10,10,10,0.95));
+border-radius:18px;
+padding:26px;
+box-shadow:
+0 0 0 1px rgba(212,175,55,0.25),
+0 30px 60px rgba(0,0,0,0.9),
+0 0 60px rgba(212,175,55,0.12);
+}
+
+/* LOGO */
+.logo{text-align:center;margin-bottom:12px}
+.logo img{
+width:180px;
+max-width:70vw;
+filter:drop-shadow(0 0 10px rgba(212,175,55,.45));
+}
+
+/* TITLE */
+.title-box{
+text-align:center;
+margin-bottom:30px;
+line-height:1.25;
+}
+
+.title-line{
+font-weight:800;
+letter-spacing:2px;
+background:linear-gradient(135deg,#f1c40f,#e6e6e6,#d4af37);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.title-top{font-size:26px}
+.title-mid{font-size:15px;margin:6px 0;letter-spacing:4px}
+.title-bottom{font-size:22px}
+
+@media(min-width:768px){
+.title-top{font-size:30px}
+.title-bottom{font-size:26px}
+}
+
+/* SECTION */
+.section-title{
+color:#f1c40f;
+font-size:15px;
+font-weight:600;
+margin:22px 0 10px;
+}
+
+/* CONTACT CARD */
+.contact-box{
+background:linear-gradient(145deg,rgba(26,26,26,0.95),rgba(10,10,10,0.95));
+border-radius:14px;
+padding:15px;
+margin-bottom:14px;
+border:1px solid rgba(192,192,192,.25);
+}
+
+.contact-box a{
+color:#fff;
+font-weight:600;
+text-decoration:none;
+word-break:break-all;
+}
+
+.contact-box span{
+display:block;
+font-size:12px;
+color:#bfc1c2;
+margin-top:6px;
+}
+
+.copy-btn{
+margin-left:6px;
+background:transparent;
+border:1px solid #d4af37;
+color:#d4af37;
+padding:4px 9px;
+border-radius:7px;
+font-size:11px;
+cursor:pointer;
+}
+.copy-btn:hover{background:#d4af37;color:#000}
+
+/* BUTTONS */
+.action-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:12px;
+}
+
+.btn{
+flex:1 1 140px;
+padding:11px;
+border-radius:11px;
+font-size:13px;
+font-weight:600;
+text-align:center;
+cursor:pointer;
+border:none;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+text-decoration:none;
+}
+
+.call-btn{
+background:linear-gradient(135deg,#d4af37,#f1c40f);
+color:#000;
+}
+
+.wa-btn{
+background:#25d366;
+color:#fff;
+}
+
+.mail-btn{
+background:#ea4335;
+color:#fff;
+}
+
+.icon{width:18px;height:18px}
+
+/* FOOTER */
+.footer{
+text-align:center;
+font-size:11px;
+color:#a0a0a0;
+margin-top:26px;
+}
+
+/* FLOATING */
+.floating{
+position:fixed;
+bottom:18px;
+right:18px;
+display:flex;
+flex-direction:column;
+gap:14px;
+z-index:999;
+}
+
+.float-btn{
+width:56px;
+height:56px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 25px rgba(0,0,0,.7);
+text-decoration:none;
+}
+
+.float-wa{background:#25d366}
+.float-call{background:linear-gradient(135deg,#d4af37,#f1c40f)}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img id="logoImg" alt="Business Logo">
+</div>
+
+<div class="title-box">
+  <div class="title-line title-top">CAPITAL HARDWARES</div>
+  <div class="title-line title-mid">AND</div>
+  <div class="title-line title-bottom">MACHINERIES</div>
+</div>
+
+<!-- SHOP -->
+<div class="section-title">🏪 Shop Contact</div>
+
+<div class="contact-box">
+📞 <a id="shopPhone"></a>
+<button class="copy-btn" onclick="copyText('shopPhone')">Copy</button>
+
+<div class="action-buttons">
+<a class="btn call-btn" id="shopCallBtn">📞 Call</a>
+<a class="btn wa-btn" id="shopWaBtn" target="_blank">
+<img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+WhatsApp
+</a>
+</div>
+</div>
+
+<div class="contact-box">
+✉️ <a id="shopEmail"></a>
+<button class="copy-btn" onclick="copyText('shopEmail')">Copy</button>
+
+<div class="action-buttons">
+<a class="btn mail-btn" id="shopMailApp">
+<img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png">
+Email App
+</a>
+<a class="btn mail-btn" id="shopMailWeb" target="_blank">
+<img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png">
+Gmail Web
+</a>
+</div>
+</div>
+
+<!-- GODOWN -->
+<div class="section-title">🏭 Godown Contact</div>
+
+<div class="contact-box">
+📞 <a id="godownPhone"></a>
+<button class="copy-btn" onclick="copyText('godownPhone')">Copy</button>
+
+<div class="action-buttons">
+<a class="btn call-btn" id="godownCallBtn">📞 Call</a>
+<a class="btn wa-btn" id="godownWaBtn" target="_blank">
+<img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+WhatsApp
+</a>
+</div>
+</div>
+
+<div class="contact-box">
+✉️ <a id="godownEmail"></a>
+<button class="copy-btn" onclick="copyText('godownEmail')">Copy</button>
+
+<div class="action-buttons">
+<a class="btn mail-btn" id="godownMailApp">
+<img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png">
+Email App
+</a>
+<a class="btn mail-btn" id="godownMailWeb" target="_blank">
+<img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png">
+Gmail Web
+</a>
+</div>
+</div>
+
+<div class="footer">
+© 2026 Capital Hardwares And Machineries
+</div>
+
+</div>
+
+<!-- FLOATING -->
+<div class="floating">
+<a class="float-btn float-wa" id="floatWa" target="_blank">
+<img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+<a class="float-btn float-call" id="floatCall">📞</a>
+</div>
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDLiBTWs-p4tJljMOxiZ_qnYQo9yDUlAaQ",
+  authDomain: "order-ce5cb.firebaseapp.com",
+  projectId: "order-ce5cb",
+  storageBucket: "order-ce5cb.appspot.com",
+  messagingSenderId: "232907297400",
+  appId: "1:232907297400:web:4c686d9725ef8c4b31538d"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+db.collection("contact").doc("main").onSnapshot(doc=>{
+  if(!doc.exists) return;
+  const d = doc.data();
+
+  if(d.logoURL) logoImg.src = d.logoURL;
+
+  shopPhone.innerText = d.shopPhone;
+  shopCallBtn.href = "tel:"+d.shopPhone.replace(/\s+/g,"");
+  shopWaBtn.href = "https://wa.me/"+d.shopPhone.replace(/\D/g,"");
+  floatWa.href = shopWaBtn.href;
+  floatCall.href = shopCallBtn.href;
+
+  shopEmail.innerText = d.shopEmail;
+  shopMailApp.href = "mailto:"+d.shopEmail;
+  shopMailWeb.href = "https://mail.google.com/mail/?view=cm&fs=1&to="+d.shopEmail;
+
+  godownPhone.innerText = d.godownPhone;
+  godownCallBtn.href = "tel:"+d.godownPhone.replace(/\s+/g,"");
+  godownWaBtn.href = "https://wa.me/"+d.godownPhone.replace(/\D/g,"");
+
+  godownEmail.innerText = d.godownEmail;
+  godownMailApp.href = "mailto:"+d.godownEmail;
+  godownMailWeb.href = "https://mail.google.com/mail/?view=cm&fs=1&to="+d.godownEmail;
+});
+});
+
+function copyText(id){
+navigator.clipboard.writeText(document.getElementById(id).innerText)
+.then(()=>alert("Copied"));
+}
+</script>
+
+</body>
+</html>
